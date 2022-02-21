@@ -4,6 +4,7 @@ import cors from 'cors';
 
 import userRoutes from './routes/userRoutes';
 import tokenRoutes from './routes/tokenRoutes';
+import passwordRoutes from './routes/passwordRoutes';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ class App {
   routes() {
     this.app.use('/users/', userRoutes);
     this.app.use('/token/', tokenRoutes);
+    this.app.use('/password/', passwordRoutes);
   }
 }
 

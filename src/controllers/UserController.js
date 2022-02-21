@@ -42,6 +42,8 @@ export class UserController {
         });
       }
       return response.status(500).json(e);
+    } finally {
+      prisma.$disconnect();
     }
   }
 }
